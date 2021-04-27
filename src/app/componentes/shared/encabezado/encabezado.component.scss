@@ -5,21 +5,60 @@
     display: grid;
     grid-template-columns: $margenContenido auto $margenContenido;
     border-bottom: 3px solid $colorPrimario;
-    background-color: $colorSecundario;
+    background-color: $colorCinco;
     @include tabletLaptop(){
-        grid-template-columns: $margenContenido auto 55%;
+        grid-template-columns: $margenContenido auto 5%;
     }
     .contLogo{
-        text-align: left;
-        padding: 10px 0;
+      display: grid;
+      grid-template-columns: repeat(2,50%);
+      text-align: center;
+      padding: 10px 0;
+      // text-align: left;
+      // padding: 10px 0;
+      // @include tabletLaptop(){
+      //     text-align: left;
+      // }
+
+      .cliente {
+        align-self: center;
+        justify-self: left;
+        width: 40%;
+
         @include tabletLaptop(){
-            text-align: left;
+          width: 20%;
         }
-        img{
-            width: 30%;
-            @include tabletLaptop(){
-                width: 25%;
-            }
+      }
+
+      .santander {
+        align-self: center;
+        justify-self: right;
+        width: 55%;
+
+        @include tabletLaptop(){
+          width: 30%;
         }
-    }
+      }
+        // img{
+        //     width: 30%;
+        //     @include tabletLaptop(){
+        //         width: 25%;
+        //     }
+        // }
+      }
+    // .santander{
+
+    //   text-align: left;
+    //   padding: 10px 0;
+    //   @include tabletLaptop(){
+    //       text-align: right;
+    //   }
+
+    //   img{
+    //     width: 30%;
+    //     @include tabletLaptop(){
+    //         width: 25%;
+    //     }
+    // }
+    // }
 }

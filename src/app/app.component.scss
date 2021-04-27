@@ -4,7 +4,7 @@
 .contenedor{
     grid-row: 1;
     grid-column: 1;
-    background-image: url(../assets/img/fondo.png);
+    background-image: url(../assets/img/Fondo.jpg);
     background-repeat: no-repeat;
     background-position: top center;
     background-attachment: fixed;
@@ -12,6 +12,10 @@
     min-height: 100vh;
     @include Asmall(){
         background-image: none;
+    }
+
+    .encad{
+      background-color: aliceblue;
     }
 }
 
