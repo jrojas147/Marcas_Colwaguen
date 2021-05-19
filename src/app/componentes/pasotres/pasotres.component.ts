@@ -39,7 +39,7 @@ export class PasotresComponent {
 
    viabilizar() {
     this.consultaCentrales.observableAutenticar.subscribe((value: number) => {
-      
+
       if (value === 1) {
       if (this.consultaCentrales.contactoCentrales.DatosFinancieros.ActividadEconomica) {
         if (this.consultaCentrales.contactoCentrales.DatosFinancieros.ActividadEconomica === 1) {
@@ -75,7 +75,7 @@ cleanRespuesta(respuesta) {
   r = r.replace(new RegExp("ç", 'g'),"c");
   r = r.replace(new RegExp("[èéêë]", 'g'),"e");
   r = r.replace(new RegExp("[ìíîï]", 'g'),"i");
-  r = r.replace(new RegExp("ñ", 'g'),"n");                            
+  r = r.replace(new RegExp("ñ", 'g'),"n");
   r = r.replace(new RegExp("[òóôõö]", 'g'),"o");
   r = r.replace(new RegExp("œ", 'g'),"oe");
   r = r.replace(new RegExp("[ùúûü]", 'g'),"u");
@@ -85,7 +85,9 @@ cleanRespuesta(respuesta) {
   if(r.length > 12 && this.resultado == 2){
     if(r == 'preaprobadonosevalidoingresopormareiguanosevalidoingresoporincomeestimatorpreaprobadoporvalidacionreglasmotorcapacidaddepagoyobanconoaplicaparafasttrack'){
         this.variantePreaprobado = 21;
-        this.sendMail = true;
+        if(this.scanParams.enriquecido){
+          this.sendMail = true;
+        }
     }
     if(r == 'preaprobadonosevalidoingresopormareiguanosevalidoingresoporincomeestimatorreglasmotorycapacidaddepagovalidoperopreaprobadoportipodeingreso'){
         this.variantePreaprobado = 22;
@@ -106,7 +108,7 @@ cleanRespuesta(respuesta) {
         this.variantePreaprobado = 25;
         if(this.scanParams.enriquecido){
           this.sendMail = true;
-        } 
+        }
     }
     if(r == 'preaprobadonosevalidocorreoelectroniconicelularporubica'){
         this.variantePreaprobado = 26;

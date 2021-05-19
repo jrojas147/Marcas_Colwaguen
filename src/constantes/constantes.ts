@@ -4,7 +4,7 @@ export const Constantes = {
     nombreCliente: "Colwagen",
     webAliado: "https://colwagen.com/",
     sendChatCarai: "https://cariai.com/santanderdigitalchannel/santanderdigitalchannel",
-    sendMailRoinsens: "mailto:digital@santanderconsumer.co?subject=Soy-preaprobado",
+    sendMailRoinsens: "mailto:digitalcanal@santanderconsumer.co?subject=Soy-preaprobado",
     periodos: [
                 {value: 4, name: 48},
                 {value: 5, name: 60},
@@ -61,7 +61,18 @@ export const Constantes = {
                     "SANTANDER CONSUMER informa que tiene publicadas sus Políticas de Recolección, Uso y Administración de Información Personal en la página www.premiercredit.co. El Titular de la Información Personal, abajo firmante, informa a PREMIER que en desarrollo de los pagos efectuados de aportes al Sistema de Protección Social, en desarrollo de la autoliquidación y pagos o de la liquidación por parte de un eventual empleador, se ha entregado su Información Personal al diligenciar la Planilla Integrada de Liquidación de Aportes – PILA, información relacionada con sus ingresos mensuales base de cotización, pagos a través del PILA y otros datos financieros. El Titular de la Información Personal confiere autorización para TRATAR su Información Personal, para recolectar, transferir, almacenar, usar, circular, suprimir, compartir, actualizar y transmitir la Información Personal con los siguientes fines: 1) Análisis de riesgos financieros, para ofrecimiento de productos financieros; 2) Para recolectar mis datos, consultarlos, procesarlos, divulgarlos y mantenerlos ante cualquier operador de bases de datos. Se reconoce y acepta que los datos objeto del tratamiento, pueden llegar a quedar alojados por fuera de Colombia, en virtud de contratos o procesamiento de tal información con responsables de tal manejo por fuera de Colombia, caso en el cual PREMIER entregará la información bajo la existencia de un contrato y a responsables ubicados en países con un nivel de protección de datos personales similar o superior al existente en Colombia. Se deja expresa constancia que la presente autorización puede ser revocada por el usuario y Titular de la Información Personal, en la medida que se cumplan con los requisitos legales para tal revocatoria"
                     ]
         },
-
+      TextoNoViable: {
+        titulo: `<h1>Prueba`,
+        contenido: `Tu solicitud no es viable en este momento.`
+      },
+      TextoViable: {
+        titulo: `¡Tu solicitud es viable!`,
+        contenido: `Pronto uno de nuestros asesores se comunicará contigo para continuar la solicitud de crédito.`
+      },
+      TextoViableChat: {
+        titulo: `¡Felicitaciones!`,
+        contenido: `Tu crédito es viable. Estás a un click de tener carro, chatea con tu asesor personalizado haciendo click en el boton o escribiéndonos vía Whatsapp a nuestra cuenta oficial +57 1 7443592.`
+      },
     /* Imagenes */
     aprobado: './assets/img/aprobado.png',
     negado: './assets/img/negado.png',
