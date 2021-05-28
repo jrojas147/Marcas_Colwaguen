@@ -58,6 +58,13 @@ export class PasotresComponent {
       this.consultaCentrales.respuesta(this.consultaCentrales.contactoCentrales).subscribe((res: any) => {
         this.resultado = res.IdResultado;
         let respuesta = res.Resultado;
+
+
+        // //test
+          // this.resultado = 2  ;
+          // respuesta = 'preaprobadonosevalidocorreoelectroniconicelularporubica';
+          //  this.scanParams.enriquecido = true;
+
         this.cleanRespuesta(respuesta);
       });
 
@@ -85,44 +92,37 @@ cleanRespuesta(respuesta) {
   if(r.length > 12 && this.resultado == 2){
     if(r == 'preaprobadonosevalidoingresopormareiguanosevalidoingresoporincomeestimatorpreaprobadoporvalidacionreglasmotorcapacidaddepagoyobanconoaplicaparafasttrack'){
         this.variantePreaprobado = 21;
-        if(this.scanParams.enriquecido){
-          this.sendMail = true;
-        }
+        this.sendMail = true;
     }
     if(r == 'preaprobadonosevalidoingresopormareiguanosevalidoingresoporincomeestimatorreglasmotorycapacidaddepagovalidoperopreaprobadoportipodeingreso'){
         this.variantePreaprobado = 22;
+        this.sendMail = true;
     }
     if(r == 'preaprobadopreaprobadoporvalidacionreglasmotorcapacidaddepagoyobanconoaplicaparafasttrack'){
         this.variantePreaprobado = 23;
-        if(this.scanParams.enriquecido){
-          this.sendWhatsapp = true;
-        }
+        this.sendWhatsapp = true;
     }
     if(r == 'preaprobadosevalidoenmareiguaperonocumpleconcontinuidadlaboralpreaprobadoporvalidacionreglasmotorcapacidaddepagoyobanconoaplicaparafasttrack'){
-        this.variantePreaprobado = 24;
-        if(this.scanParams.enriquecido){
-          this.sendMail = true;
-        }
+        this.variantePreaprobado =  24;
+        this.sendMail = true;
     }
     if(r == 'preaprobadosevalidoenmareiguaperonocumpleconcontinuidadlaboralreglasmotorycapacidaddepagovalidoperopreaprobadoportipodeingreso'){
         this.variantePreaprobado = 25;
-        if(this.scanParams.enriquecido){
-          this.sendMail = true;
-        }
+        this.sendMail = true;
     }
     if(r == 'preaprobadonosevalidocorreoelectroniconicelularporubica'){
         this.variantePreaprobado = 26;
-        if(this.scanParams.enriquecido){
         this.sendWhatsapp = true;
-        }
     }
-}else{
-    this.variantePreaprobado = 2;
-}
-
-if(this.scanParams.enriquecido && (this.resultado == 4 || this.resultado == 3)){
-  this.sendWhatsapp = true;
-}
+  }else{
+        this.variantePreaprobado = 2;
+        this.sendMail = true;
+  }
+  if(this.resultado == 3){
+    this.sendWhatsapp = true;
+  }
+  if(this.resultado == 4 ){
+  }
 }
 
 gotoReferrer() {
