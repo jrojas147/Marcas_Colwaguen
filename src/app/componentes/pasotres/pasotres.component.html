@@ -24,44 +24,29 @@
           </div>
         </div>
         <!--pre aprobado-->
-        <div *ngIf="resultado == 2 && (variantePreaprobado == 23 || variantePreaprobado == 26 )">
+        <div *ngIf="resultado == 2">
+          <div class="contRespuesta">
+            <img [src]="const.aprobado" alt="">
+            <p class="tituloAprobado">¡Tu solicitud es viable!</p>
+            <p class="textoRespuesta">Pronto uno de nuestros asesores te llamara para acompañarte hasta que tengas tu vehículo.</p>
+          </div>
+        </div>
+        <!--Aprobado -->
+        <div *ngIf="resultado == 3">
           <div class="contRespuesta">
             <img [src]="const.aprobado" alt="">
             <p class="tituloAprobado">Aprobado</p>
             <p class="tituloAprobado">¡Tu solicitud es viable!</p>
             <p class="textoRespuesta">¡Felicitaciones! Tu crédito es viable. Estás a un click de tener carro, chatea con tu asesor personalizado haciendo click en el botón o escribiéndonos vía Whatsapp a nuestra cuenta oficial +57 1 7443592</p>
           </div>
-      </div>
-      <div *ngIf="resultado == 2 && (variantePreaprobado == 2 || variantePreaprobado == 21 || variantePreaprobado == 22 || variantePreaprobado == 24 || variantePreaprobado == 25)">
-        <div class="contRespuesta">
-          <img [src]="const.aprobado" alt="">
-          <p class="tituloAprobado">Aprobado</p>
-          <p class="tituloAprobado">¡Estás muy cerca de tener tu crédito aprobado! Para lograrlo debes enviar un correo a digital@santanderconsumer.co con los siguientes documentos:</p>
-          <p class="textoRespuesta"> 1) Si eres empleado (permanente, por prestación de servicios o por obra/labor): Debes haber trabajado los últimos 12 meses, y debes enviar el/los certificado(s) que lo demuestren<br><br>
-                    2) Si eres independiente: Debes tener una trayectoria de al menos 2 años, y debes enviar Cámara de Comercio ó RUT, extractos bancarios de los últimos 3 meses y dos referencias comerciales (cartas de tus proveedores o clientes indicando tiempo de la relación y monto promedio de los pagos)</p>
         </div>
-      </div>
-      <!--Aprobado -->
-      <div *ngIf="resultado == 3">
-        <div class="contRespuesta">
-          <img [src]="const.aprobado" alt="">
-          <p class="tituloAprobado">Aprobado</p>
-          <p class="tituloAprobado">¡Tu solicitud es viable!</p>
-          <p class="textoRespuesta">¡Felicitaciones! Tu crédito es viable. Estás a un click de tener carro, chatea con tu asesor personalizado haciendo click en el botón o escribiéndonos vía Whatsapp a nuestra cuenta oficial +57 1 7443592</p>
+        <div *ngIf="resultado == 4">
+          <div class="contRespuesta">
+            <img [src]="const.aprobado" alt="">
+            <p class="tituloAprobado">Tu solicitud ya está en proceso</p>
+            <p class="textoRespuesta">Tu solicitud ya está en proceso Chatea con tu asesor personalizado en haciendo click aquí o escribiéndonos vía Whatsapp a nuestra cuenta oficial +57 1 7443592</p>
+          </div>
         </div>
-      </div>
-      <div *ngIf="resultado == 4">
-        <div class="contRespuesta">
-          <img [src]="const.aprobado" alt="">
-          <p class="tituloAprobado">Tu solicitud ya está en proceso</p>
-          <p class="textoRespuesta">Tu solicitud ya está en proceso Chatea con tu asesor personalizado en haciendo click aquí o escribiéndonos vía Whatsapp a nuestra cuenta oficial +57 1 7443592</p>
-         </div>
-      </div>
-
-
-
-
-
       </div>
     </div>
     <hr>
