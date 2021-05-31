@@ -14,7 +14,7 @@
           matInput
           [options]="{ align: 'left', prefix: '$ ', suffix: '', thousands: '.', decimal: ',', precision: 0 }"
           formControlName="monto">
-          <mat-error *ngIf="precioNoValido">Debes diligenciar mínimo $ {{ const.precioMinimo | number:'1.0':'es'}}</mat-error>
+          <mat-error *ngIf="">Debes diligenciar mínimo $ {{ const.precioMinimo | number:'1.0':'es'}}</mat-error>
       </mat-form-field>
 
       <mat-label>¿A cuántos meses quieres pagar?</mat-label>
@@ -49,7 +49,7 @@
           mat-button
           color="primary"
           class="btnPrimario"
-          [disabled]="primero.invalid || cuotaInicialNoValido"
+          [disabled]="primero.invalid"
           (click)="consultaCentrales.primeroCompleto = true"
           matStepperNext>CONTINUAR <mat-icon>arrow_right_icon</mat-icon></button>
       </div>

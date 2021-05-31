@@ -58,7 +58,6 @@ export class PasodosComponent {
     this.segundo.controls['actividadEconomica'].valueChanges.subscribe(value => this.consultaCentrales.contactoCentrales.DatosFinancieros.ActividadEconomica = value);
     this.segundo.controls['ingresoMensual'].valueChanges.subscribe(value => this.consultaCentrales.contactoCentrales.DatosFinancieros.IngresoMensual = value);
     this.segundo.controls['autorizaConsultaCentrales'].valueChanges.subscribe(value => this.consultaCentrales.contactoCentrales.OtrosDatos.AutorizaConsultaCentrales = value);
-
     this.segundo.controls['tipoDocumento'].setValue(1);
    }
 
@@ -75,7 +74,7 @@ export class PasodosComponent {
   get documentoExtranjeria() {
     return this.segundo.controls['tipoDocumento'].value == 1 && this.segundo.controls['numeroDocumento'].value.length == 6 && this.segundo.get('numeroDocumento').touched;
   }
-  
+
   get celularNoValido() {
     return this.segundo.get('celular').invalid && this.segundo.get('celular').touched;
   }

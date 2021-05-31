@@ -91,19 +91,19 @@ export class ConsultaCentralesService {
     if (!this.scanParams.roisense && !this.scanParams.idc) {
       this.contactoCentrales.OtrosDatos.ConcesionarioRadicacion = 99;
     }
-
+    this.contactoCentrales.OtrosDatos.InfoTres = 'j.caceresc@santanderconsumer.co, ltafur@domingoalonsogroup.com, sebastianmartinez@colwagen.com, estefaniapinilla@finazul.co';
     const bodyT = {
       UserPass: this.const.userpass
     };
-    
+
     const body = new HttpParams({fromObject: bodyT});
-    
+
 
     return this.http.post(`${this.env.urlA}`, body, this.options)
     .subscribe((resp: any) => {
            this.token = resp.Token;
            this.autenticar = resp.Status;
-           this.contactoCentrales.OtrosDatos.InfoTres = this.linkOrigen;
+          // this.contactoCentrales.OtrosDatos.InfoTres = this.linkOrigen;
 
            this.headerVi = {
             'Content-Type': 'application/json',
