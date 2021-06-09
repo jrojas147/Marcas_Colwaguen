@@ -44,7 +44,7 @@ div#check {
 }
 
 .contCampoDos{
-    
+
     @include tabletLaptop(){
         display: grid;
         grid-template-columns: repeat(2, auto);
@@ -65,5 +65,9 @@ div#check {
             }
         }
     }
+}
+
+::placeholder{
+  color: black !important;
 }
 
