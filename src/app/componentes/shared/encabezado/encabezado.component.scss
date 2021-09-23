@@ -1,36 +1,35 @@
-@import './../../../../scss/variables';
-@import './../../../../scss/mixins';
+@import "./../../../../scss/variables";
+@import "./../../../../scss/mixins";
 
-.contenedor{
-    display: grid;
-    grid-template-columns: $margenContenido auto $margenContenido;
-    grid-template-columns: 5% auto 5%;
-    border-bottom: 3px solid $colorPrimario;
-    background-color: $colorCinco;
-    @include tabletLaptop(){
-        grid-template-columns: $margenContenido auto 5%;
-    }
-    .contLogo{
-      display: grid;
-      grid-template-columns: repeat(2,50%);
-      text-align: center;
-      padding: 10px 0;
-
-      .logoCliente {
-        width: 130px;
-        @include Asmall() {
-          width: 50px;
-        }
-      }
-
-      .logoSantander {
-        width: 150px;
-        align-self: center;
-        justify-self: right;
-        @include Asmall() {
-          width: 110px;
-        }
-      }
+.contenedor {
+  display: grid;
+  grid-template-columns: $margenContenido auto $margenContenido;
+  grid-template-columns: 5% auto 5%;
+  border-bottom: 3px solid $colorPrimario;
+  background-color: $colorCinco;
+  @include tabletLaptop() {
+    grid-template-columns: $margenContenido auto 5%;
   }
+  .contLogo {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    text-align: center;
+    padding: 10px 0;
 
+    .logoCliente {
+      width: 80px;
+      @include Asmall() {
+        width: 70px;
+      }
+    }
+
+    .logoSantander {
+      width: 140px;
+      align-self: center;
+      justify-self: right;
+      @include Asmall() {
+        width: 110px;
+      }
+    }
+  }
 }
